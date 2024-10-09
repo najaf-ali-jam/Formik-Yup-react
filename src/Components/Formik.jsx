@@ -49,6 +49,7 @@ const Formik = () => {
           onBlur={handleBlur}
           value={values.name}
           className="text-black p-2 mt-5"
+           autoComplete="off"
         />
         <br></br>
         {errors.name && touched.name ? (
@@ -62,6 +63,7 @@ const Formik = () => {
           onBlur={handleBlur}
           value={values.email}
           className="text-black p-2"
+           autoComplete="off"
         />
         <br></br>
         {errors.email && touched.email ? (
@@ -69,12 +71,13 @@ const Formik = () => {
         ) : null}
         <br></br>
         <input
-          type="text"
+          type="number"
           name="age"
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.age}
           className="text-black p-2"
+           autoComplete="off"
         />
         <br></br>
         {errors.age && touched.age ? (
@@ -88,6 +91,7 @@ const Formik = () => {
           onBlur={handleBlur}
           value={values.password}
           className="text-black p-2"
+           autoComplete="new-password"
         />
         <br></br>
         {errors.password && touched.password ? (
@@ -101,6 +105,7 @@ const Formik = () => {
           onBlur={handleBlur}
           value={values.cpass}
           className="text-black p-2"
+           autoComplete="new-password"
         />
         <br></br>
         {errors.cpass && touched.cpass ? (
@@ -108,7 +113,7 @@ const Formik = () => {
         ) : null}
         <br></br>
         <input
-          type="Submit"
+          type="submit"
           value="Submit"
           className="bg-black p-2 rounded text-3xl font-bold text-green-300 cursor-pointer w-48 hover:bg-violet-600 hover:text-white"
         />
